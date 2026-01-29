@@ -100,19 +100,37 @@ if (galleryTrack && galleryItems.length && prevBtn && nextBtn) {
 }
 
 
-    // Review slider functionality (basic)
-    const reviewPrev = document.querySelector('.review-nav.prev');
-    const reviewNext = document.querySelector('.review-nav.next');
-    
-    if (reviewPrev && reviewNext) {
-        reviewPrev.addEventListener('click', () => {
-            console.log('Previous reviews');
-        });
-        
-        reviewNext.addEventListener('click', () => {
-            console.log('Next reviews');
-        });
+   // Review slider functionality (3 reviews per slide)
+const reviewTrack = document.querySelector('.reviews-track');
+const reviewCards = document.querySelectorAll('.review-card');
+const reviewPrev = document.querySelector('.review-nav.prev');
+const reviewNext = document.querySelector('.review-nav.next');
+
+if (reviewTrack && reviewCards.length && reviewPrev && reviewNext) {
+    let currentIndex = 0;
+    const reviewsPerView = 3;
+    const totalReviews = reviewCards.length;
+
+    function updateReviewSlider() {
+        const cardWidth = reviewCards[0].offsetWidth + 25; // card width + gap
+        reviewTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
+
+    reviewNext.addEventListener('click', () => {
+        if (currentIndex + reviewsPerView < totalReviews) {
+            currentIndex += reviewsPerView;
+            updateReviewSlider();
+        }
+    });
+
+    reviewPrev.addEventListener('click', () => {
+        if (currentIndex - reviewsPerView >= 0) {
+            currentIndex -= reviewsPerView;
+            updateReviewSlider();
+        }
+    });
+}
+
 
     // Scroll animations
     const observerOptions = {
