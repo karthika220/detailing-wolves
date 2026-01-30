@@ -1866,6 +1866,31 @@ body {
     padding: 14px 20px;
   }
 }
+/* ================================================= */
+/* MOBILE FIX – LOCATION TEXT EDGE SPACING */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  /* Reduce text width & add breathing space */
+  .location-left {
+    padding: 0 16px;        /* 🔥 side spacing */
+    max-width: 100%;
+  }
+
+  /* Ensure text doesn’t touch edges */
+  
+  .location-left h2,
+  .location-left p,
+  .location-left .contact-info {
+    max-width: 92%;
+  }
+  .map-container {
+    max-width: 95%;
+    padding-right: 10px;
+  }
+
+}
 
 
 
