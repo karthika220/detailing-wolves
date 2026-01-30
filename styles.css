@@ -1054,7 +1054,7 @@ body {
         gap: 20px;
     }
     .service-content p {
-        text-align: center;
+        text-align: left;
     }
     
     /* Section subtitle alignment */
