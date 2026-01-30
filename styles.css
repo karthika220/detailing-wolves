@@ -999,7 +999,7 @@ body {
 /* ============================= */
 
 .footer {
-  background-color: #000000;
+  background-color: #ffffff;
   padding: 28px 0 24px;
   text-align: center;
 }
@@ -1011,20 +1011,30 @@ body {
 }
 
 .footer-text {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   font-weight: 400;
 }
 
 .footer-credit {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .footer-credit span {
   color: var(--primary-orange);
   font-weight: 600;
 }
+.profitcast-link {
+  color: #ff6b35;          /* or your brand color */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* .profitcast-link:hover {
+  text-decoration: underline;
+} */
+
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -1263,6 +1273,6 @@ body {
 
 .google-reviews {
   padding: 80px 0;
-  background: #f9f9f9;
+  background: #ffff;
 }
 
