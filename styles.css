@@ -221,7 +221,7 @@ body {
 .section-subtitle {
     text-align: center;
     color: var(--text-gray);
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 50px;
 }
